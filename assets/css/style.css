@@ -36,6 +36,10 @@ p {
     color: white;
 }
 
+a {
+    color: black;
+}
+
 /* Header */
 #header {
     background-color: var(--primary-color);
