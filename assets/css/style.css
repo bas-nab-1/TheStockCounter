@@ -57,6 +57,10 @@ p {
 }
 
 /* Main section */
+#main {
+    display: none;
+}
+
 #add-item {
     padding: 50px 30px;
     border: solid 1px black;
