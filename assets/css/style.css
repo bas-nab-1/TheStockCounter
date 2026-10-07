@@ -23,6 +23,7 @@ h1 {
 h2 {
     font-family: var(--primary-font);
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 p {
@@ -43,7 +44,7 @@ p {
 }
 
 /* Intro */
-.container {
+#intro div  {
     display: flex;
     flex-direction: column;
     padding: 50px 30px;
@@ -53,4 +54,23 @@ p {
 #start-btn {
     margin-top: 30px;
     align-self: center;
+}
+
+/* Main section */
+#add-item {
+    padding: 50px 30px;
+    border: solid 1px black;
+    background-color: var(--secondary-color);
+}
+
+#stocktake-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#save-btn {
+    margin: 30px auto 0;
+    display: block;
 }
