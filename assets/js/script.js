@@ -5,6 +5,11 @@ $("#start-btn").on("click", function() {
     $("#intro").hide("swing");
 });
 
+$("#new-location-btn").on("click", function() {
+    $("#new-location").show("swing");
+});
+
+
 
 // Enable the Bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
