@@ -26,6 +26,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    margin-top: 25px;
+}
+
 p {
     font-family: var(--secondary-font);
     font-size: 1.2rem;
@@ -78,7 +82,22 @@ a {
     flex-wrap: wrap;
 }
 
-#save-btn {
-    margin: 30px auto 0;
-    display: block;
+#stocktake-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+#new-location-input {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#new-location {
+    display: none;
 }
