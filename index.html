@@ -70,26 +70,27 @@
                 </div>
                 <div id="new-location">
                     <h3>Item Location</h3>
-                    <div id="new-location-input">
+                    <div class="new-location-input">
                         <div>
                             <label for="item-location">Item Location </label>
                             <a href="#" data-bs-toggle="tooltip" data-bs-title="Enter the location of the item."><i class="fa-regular fa-circle-question"></i></a><br>
-                            <input id="item-location" type="text" required>
+                            <input class="item-location" type="text" required>
                         </div>
                         <div>
                             <label for="item-quantity-location">Quantity</label>
                             <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in your count of the item in one location. The total will automatically calculated in the quantity input at the top"><i class="fa-regular fa-circle-question"></i></a><br>
-                            <input id="quantity-location" type="number" min="0" required>
+                            <input class="quantity-location" type="number" min="0" required>
                         </div>
                     </div>
                 </div>
                 <div id="stocktake-btn">
-                    <div>
-                        <button class="btn" id="new-location-btn">Add location</button>
-                    </div>
-                    <div>
+                    
+                    <button class="btn" id="new-location-btn">Add Location</button>
+                    
+                    <button class="btn" id="duplicate">Add Location</button>
+                    
                     <button class="btn" id="save-btn">Save Item</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>

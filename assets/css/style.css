@@ -85,19 +85,37 @@ a {
 #stocktake-btn {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     flex-wrap: wrap;
     margin-top: 45px;
 }
 
-#new-location-input {
+#new-location-btn {
+    margin-right: 25px;
+}
+#duplicate {
+    display: none;
+    margin-right: 25px;
+}
+
+.new-location-input {
     margin-top: 15px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 #new-location {
     display: none;
+}
+
+/* to fix alignement issues on mobile */
+
+/* small devices (440px and up) */
+@media screen and (min-width: 440px) {
+    .new-location-input {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
