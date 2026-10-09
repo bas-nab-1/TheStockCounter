@@ -6,7 +6,7 @@ $("#start-btn").on("click", function() {
 });
 
 
-// Display the new-location div //
+// Displays the new-location div //
 
 $("#new-location-btn").on("click", function() {
     $("#new-location").show("swing");
@@ -15,7 +15,7 @@ $("#new-location-btn").on("click", function() {
 });
 
 
-// Create up to 6 clones of the new-location-input div //
+// Creates up to 6 clones of the new-location-input div //
 
 $("#duplicate").on("click", function() {
     var currentCount = $("#new-location .new-location-input").length;
@@ -30,7 +30,23 @@ $("#duplicate").on("click", function() {
 
 
 
-// Enable the Bootstrap tooltips
+/* Calculates the difference between quantity and quantity required
+and assign it to the difference input field */
+
+document.getElementById("quantity-required").addEventListener("input", updateDifference);
+
+function updateDifference() {
+    const qty = parseFloat(document.getElementById("quantity").value);
+    const req = parseFloat(document.getElementById("quantity-required").value);
+    const difference = qty - req;
+    const differenceInput = document.getElementById("difference");
+
+    differenceInput.value = difference;
+}
+
+
+
+// Enables the Bootstrap tooltips
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
