@@ -44,7 +44,22 @@ function updateDifference() {
     differenceInput.value = difference;
 }
 
+// Adds the quantities entered for each location to the overall quantity
 
+document.addEventListener("input", function(e) {
+    if(!e.target.matches(".quantity-location")) return;
+    let total = 0;
+    let hasQuantity = false;
+    
+    for(let input of document.querySelectorAll(".quantity-location")) {
+        if (input.value !=="") {
+            total += Number(input.value);
+            hasQuantity = true;
+        }
+    }
+    document.getElementById("quantity").value = hasQuantity ? total : "";
+    updateDifference();
+})
 
 // Enables the Bootstrap tooltips
 
