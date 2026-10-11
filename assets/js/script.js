@@ -105,12 +105,23 @@ document.getElementById("save-btn").addEventListener("click", function() {
     transferDifference(row);
     document.getElementById("transfer").appendChild(row);
     
-    // resets the input fields when save-btn is clicked
+    // resets the input fields of the add-item div
+    //when save-btn is clicked
+    
     document.getElementById("item-description").value = "";
     document.getElementById("quantity").value = "";
     document.getElementById("quantity-required").value = "";
     document.getElementById("difference").value = "";
-})
+
+    // resets the input fields of new-location-input 
+    // when save btn is clicked
+    document.querySelectorAll(".item-location").forEach(element => {
+        element.value = "";
+    });
+    document.querySelectorAll(".quantity-location").forEach(element => {
+        element.value = "";
+    });
+});
 
 function transferItemDescription(row) {
     row.insertCell().textContent = document.getElementById("item-description").value;
