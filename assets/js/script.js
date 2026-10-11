@@ -25,7 +25,7 @@ $("#duplicate").on("click", function() {
     }
 
     if ($("#new-location .new-location-input").length >= 6) {
-        $("#duplicate").remove();
+        $("#duplicate").hide();
     }
 });
 
@@ -121,6 +121,10 @@ document.getElementById("save-btn").addEventListener("click", function() {
     document.querySelectorAll(".quantity-location").forEach(element => {
         element.value = "";
     });
+
+    $("#new-location").toggle();
+    $("#new-location-btn").show();
+    $("#duplicate").hide();
 });
 
 function transferItemDescription(row) {
