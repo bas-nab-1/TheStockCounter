@@ -83,6 +83,35 @@ document.getElementById("edit-title").addEventListener("click", function() {
     title.replaceWith(titleInput);
 })
 
+// Transfer the values of the inputs to the table when Save button is clicked
+
+document.getElementById("save-btn").addEventListener("click", function() {
+    const row = document.createElement("tr");
+    transferItemDescription(row);
+    transferQuantity(row);
+    transferQuantityRequired(row);
+    transferDifference(row);
+    document.getElementById("transfer").appendChild(row);
+})
+
+function transferItemDescription(row) {
+    row.insertCell().textContent = document.getElementById("item-description").value;
+}
+
+function transferQuantity(row) {
+    row.insertCell().textContent = document.getElementById("quantity").value;
+}
+
+function transferQuantityRequired(row) {
+    row.insertCell().textContent = document.getElementById("quantity-required").value;
+}
+
+function transferDifference(row) {
+    row.insertCell().textContent = document.getElementById("difference").value;
+}
+
+
+
 // Enables the Bootstrap tooltips
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
