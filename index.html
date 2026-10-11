@@ -95,11 +95,23 @@
         </div>
     </section>
 
-    <section id="report">
+    <section class="container" id="report">
         <div id="report-title">
             <h2 id="title">New Stocktake</h2>
             <button id="edit-title"><i class="fa-solid fa-pencil"></i></button>
         </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Quantity-required</th>
+                    <th scope="col">Difference</th>
+                </tr>
+            </thead>
+            <tbody id="transfer">
+            </tbody>
+        </table>
     </section>
 
     <!--Boostrap script for JS-->
