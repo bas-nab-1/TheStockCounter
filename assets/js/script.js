@@ -62,6 +62,27 @@ document.addEventListener("input", function(e) {
     updateDifference();
 })
 
+
+// Allows user to modify the title of the report
+
+document.getElementById("edit-title").addEventListener("click", function() {
+    const title = document.getElementById("title")
+    const titleInput = document.createElement("input");
+    titleInput.id = "title-input";
+    titleInput.type = "text";
+    titleInput.value = title.textContent;
+    
+    titleInput.addEventListener("keydown", function(e) {
+        if (e.key !== "Enter") return;
+
+        const updatedTitle = document.createElement("h2");
+        updatedTitle.id = "title";
+        updatedTitle.textContent = titleInput.value;
+        titleInput.replaceWith(updatedTitle);
+    });
+    title.replaceWith(titleInput);
+})
+
 // Enables the Bootstrap tooltips
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
