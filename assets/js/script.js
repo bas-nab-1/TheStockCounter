@@ -122,7 +122,7 @@ document.getElementById("save-btn").addEventListener("click", function() {
         element.value = "";
     });
 
-    $("#new-location").toggle();
+    $("#new-location").hide();
     $("#new-location-btn").show();
     $("#duplicate").hide();
 });
