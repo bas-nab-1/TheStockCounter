@@ -97,12 +97,19 @@ document.getElementById("save-btn").addEventListener("click", function() {
         return;
     }
     
+    // create a new row to the table and call for functions to transfer values
     const row = document.createElement("tr");
     transferItemDescription(row);
     transferQuantity(row);
     transferQuantityRequired(row);
     transferDifference(row);
     document.getElementById("transfer").appendChild(row);
+    
+    // resets the input fields when save-btn is clicked
+    document.getElementById("item-description").value = "";
+    document.getElementById("quantity").value = "";
+    document.getElementById("quantity-required").value = "";
+    document.getElementById("difference").value = "";
 })
 
 function transferItemDescription(row) {
