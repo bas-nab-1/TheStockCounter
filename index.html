@@ -30,92 +30,95 @@
         </div>
     </header>
 
-    <section id="intro">
-        <div class="container">
-            <h2>Welcome to the Stock Counter, your easy to use website for stocktaking</h2>
-            <p>With the Stock Counter, you can create a personalised list of items that need to be counted,
+    <main>
+        <section id="intro">
+            <div class="container">
+                <h2>Welcome to the Stock Counter, your easy to use website for stocktaking</h2>
+                <p>With the Stock Counter, you can create a personalised list of items that need to be counted,
                 you can set the stock levels that you require and calculate the difference to determine 
                 your next order. You can also generate a PDF file to recap your count.<br>
                 It is completely free and easy to use.
-            </p>
-            <button class="btn" id="start-btn">Start Count</button>
-        </div>
-    </section>
+                </p>
+                <button class="btn" id="start-btn">Start Count</button>
+            </div>
+        </section>
 
-    <section id="main">
-        <div class="container" id="add-item">
-            <h2>Add Item</h2>
-            <div id="stocktake">
-                <div id="stocktake-input">
-                    <div>
-                        <label for="item-description">Item-description</label>
-                        <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in the description of the item. eg: pens, plates,..."><i class="fa-regular fa-circle-question"></i></a><br>
-                        <input id="item-description" type="text" maxlength="25" required>
-                    </div>
-                    <div>
-                        <label for="item-quantity">Quantity</label>
-                        <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in your count of the item"><i class="fa-regular fa-circle-question"></i></a><br>
-                        <input id="quantity" type="number" min="0" required>
-                    </div>
-                    <div>
-                        <label for="quantity-required">Quantity required</label>
-                        <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in the amount that you should have to have the stock you need"><i class="fa-regular fa-circle-question"></i></a><br>
-                        <input id="quantity-required" type="number" min="0">
-                    </div>
-                    <div>
-                        <label for="difference">Difference</label>
-                        <a href="#" data-bs-toggle="tooltip" data-bs-title="Calculates the difference between the quantity you have and the quantity you require. This field cannot be modified"><i class="fa-regular fa-circle-question"></i></a><br>
-                        <input id="difference" readonly>
-                    </div>
-                </div>
-                <div id="new-location">
-                    <h3>Item Location</h3>
-                    <div class="new-location-input">
+        <section id="main">
+            <div class="container" id="add-item">
+                <h2>Add Item</h2>
+                <div id="stocktake">
+                    <div id="stocktake-input">
                         <div>
-                            <label for="item-location">Item Location </label>
-                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Enter the location of the item."><i class="fa-regular fa-circle-question"></i></a><br>
-                            <input class="item-location" type="text" required>
+                            <label for="item-description">Item-description</label>
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in the description of the item. eg: pens, plates,..."><i class="fa-regular fa-circle-question"></i></a><br>
+                            <input id="item-description" type="text" maxlength="25" required>
                         </div>
                         <div>
-                            <label for="item-quantity-location">Quantity</label>
-                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in your count of the item in one location. The total will automatically calculated in the quantity input at the top"><i class="fa-regular fa-circle-question"></i></a><br>
-                            <input class="quantity-location" type="number" min="0" required>
+                            <label for="item-quantity">Quantity</label>
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in your count of the item"><i class="fa-regular fa-circle-question"></i></a><br>
+                            <input id="quantity" type="number" min="0" required>
+                        </div>
+                        <div>
+                            <label for="quantity-required">Quantity required</label>
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in the amount that you should have to have the stock you need"><i class="fa-regular fa-circle-question"></i></a><br>
+                            <input id="quantity-required" type="number" min="0">
+                        </div>
+                        <div>
+                            <label for="difference">Difference</label>
+                            <a href="#" data-bs-toggle="tooltip" data-bs-title="Calculates the difference between the quantity you have and the quantity you require. This field cannot be modified"><i class="fa-regular fa-circle-question"></i></a><br>
+                            <input id="difference" readonly>
                         </div>
                     </div>
-                </div>
-                <div id="stocktake-btn">
-                    
-                    <button class="btn" id="new-location-btn">Add Location</button>
-                    
-                    <button class="btn" id="duplicate">Add Location</button>
-                    
-                    <button class="btn" id="save-btn">Save Item</button>
+                    <div id="new-location">
+                        <h3>Item Location</h3>
+                        <div class="new-location-input">
+                            <div>
+                                <label for="item-location">Item Location </label>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-title="Enter the location of the item."><i class="fa-regular fa-circle-question"></i></a><br>
+                                <input class="item-location" type="text" required>
+                            </div>
+                            <div>
+                                <label for="item-quantity-location">Quantity</label>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-title="Type in your count of the item in one location. The total will automatically calculated in the quantity input at the top"><i class="fa-regular fa-circle-question"></i></a><br>
+                                <input class="quantity-location" type="number" min="0" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="stocktake-btn">
+                        <button class="btn" id="new-location-btn">Add Location</button>
+                        <button class="btn" id="duplicate">Add Location</button>
+                        <button class="btn" id="save-btn">Save Item</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="container" id="report">
-        <div id="print">
-            <div id="report-title">
-                <h2 id="title">New Stocktake</h2>
-                <button id="edit-title"><i class="fa-solid fa-pencil"></i></button>
+        <section class="container" id="report">
+            <div id="print">
+                <div id="report-title">
+                    <h2 id="title">New Stocktake</h2>
+                    <button id="edit-title"><i class="fa-solid fa-pencil"></i></button>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Quantity-required</th>
+                            <th scope="col">Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transfer">
+                    </tbody>
+                </table>
             </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Item</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Quantity-required</th>
-                        <th scope="col">Difference</th>
-                    </tr>
-                </thead>
-                <tbody id="transfer">
-                </tbody>
-            </table>
-        </div>
-        <button class="btn" id="download">Download PDF</button>
-    </section>
+            <button class="btn" id="download">Download PDF</button>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>Developed by bas-nab-1</p>
+    </footer>
 
     <!--Boostrap script for JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
