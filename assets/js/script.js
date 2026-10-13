@@ -35,6 +35,7 @@ $("#duplicate").on("click", function() {
 and assign it to the difference input field */
 
 document.getElementById("quantity-required").addEventListener("input", updateDifference);
+document.getElementById("quantity").addEventListener("input", updateDifference);
 
 function updateDifference() {
     const quantityInput = document.getElementById("quantity");
@@ -44,7 +45,7 @@ function updateDifference() {
     const qty = parseFloat(quantityInput.value);
     const req = parseFloat(requiredInput.value);
 
-    if (quantityInput.value === "" || requiredInput.value === "") {
+    if (quantityInput.value === "" || requiredInput.value === "" ) {
         differenceInput.value = "";
         return;
     }
