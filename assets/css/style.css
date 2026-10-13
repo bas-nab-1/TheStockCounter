@@ -10,6 +10,16 @@
 }
 
 /* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 h1 {
     font-family: var(--primary-font);
     font-size: 3rem;
@@ -73,6 +83,7 @@ a {
 /* Main section */
 #main {
     display: none;
+    margin-bottom: 75px;
 }
 
 #add-item {
@@ -147,11 +158,7 @@ a {
 #footer {
     background-color: var(--primary-color);
     padding: 5px;
-    margin-top: 80px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
 }
 
 #footer p {
