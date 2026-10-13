@@ -5,7 +5,7 @@
 :root {
 --primary-font: "ibm plex serif", sans-serif;
 --secondary-font: "mukta mahee", sans-serif;
---primary-color: #209CEE;
+--primary-color: #0F7BC2;
 --secondary-color: #d3d3d3;
 }
 
@@ -140,6 +140,25 @@ a {
 
 .hide-pencil {
     display: none;
+}
+
+/* Footer */
+
+#footer {
+    background-color: var(--primary-color);
+    padding: 5px;
+    margin-top: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer p {
+    font-style: italic;
+    text-align: center;
+    color: white;
+    font-family: var(--secondary-font);
 }
 
 /* to fix alignement issues on mobile */
