@@ -21,7 +21,8 @@ $("#duplicate").on("click", function() {
     var currentCount = $("#new-location .new-location-input").length;
     if (currentCount < 6) {
         $(".new-location-input").first().clone().find("input").val("").end()
-            .appendTo("#new-location").css("border-top", "3px solid #bbb");
+        .find('[data-bs-toggle="tooltip"]').remove().end()
+        .appendTo("#new-location").css("border-top", "3px solid #bbb");
     }
 
     if ($("#new-location .new-location-input").length >= 6) {
