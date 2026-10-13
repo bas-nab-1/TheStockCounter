@@ -38,6 +38,12 @@ p {
 .btn {
     background-color: var(--primary-color);
     color: white;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 a {
