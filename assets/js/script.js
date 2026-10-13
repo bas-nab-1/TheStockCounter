@@ -37,13 +37,20 @@ and assign it to the difference input field */
 document.getElementById("quantity-required").addEventListener("input", updateDifference);
 
 function updateDifference() {
-    const qty = parseFloat(document.getElementById("quantity").value);
-    const req = parseFloat(document.getElementById("quantity-required").value);
-    const difference = qty - req;
+    const quantityInput = document.getElementById("quantity");
+    const requiredInput = document.getElementById("quantity-required");
     const differenceInput = document.getElementById("difference");
 
-    differenceInput.value = difference;
-}
+    const qty = parseFloat(quantityInput.value);
+    const req = parseFloat(requiredInput.value);
+
+    if (quantityInput.value === "" || requiredInput.value === "") {
+        differenceInput.value = "";
+        return;
+    }
+    
+    differenceInput.value = qty - req;
+};
 
 // Adds the quantities entered for each location to the overall quantity
 
