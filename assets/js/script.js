@@ -154,7 +154,7 @@ function generatePDF(e) {
     pencil.classList.add("hide-pencil")
     const element = document.getElementById('print');
     const options = {
-        margin:       1,
+        margin:       0.5,
         filename:     'document.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
