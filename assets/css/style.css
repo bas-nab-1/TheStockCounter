@@ -111,6 +111,10 @@ a {
 }
 
 /* Report section */
+
+#report {
+    display: none;
+}
 #report-title {
     margin-top: 45px;
     display: flex;
@@ -121,6 +125,15 @@ a {
     background-color: transparent;
     border: 0;
     color: inherit;
+}
+
+#download {
+    display: block;
+    margin:  25px auto;
+}
+
+.hide-pencil {
+    display: none;
 }
 
 /* to fix alignement issues on mobile */

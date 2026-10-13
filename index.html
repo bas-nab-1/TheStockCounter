@@ -96,22 +96,25 @@
     </section>
 
     <section class="container" id="report">
-        <div id="report-title">
-            <h2 id="title">New Stocktake</h2>
-            <button id="edit-title"><i class="fa-solid fa-pencil"></i></button>
+        <div id="print">
+            <div id="report-title">
+                <h2 id="title">New Stocktake</h2>
+                <button id="edit-title"><i class="fa-solid fa-pencil"></i></button>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Quantity-required</th>
+                        <th scope="col">Difference</th>
+                    </tr>
+                </thead>
+                <tbody id="transfer">
+                </tbody>
+            </table>
         </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Quantity-required</th>
-                    <th scope="col">Difference</th>
-                </tr>
-            </thead>
-            <tbody id="transfer">
-            </tbody>
-        </table>
+        <button class="btn" id="download">Download PDF</button>
     </section>
 
     <!--Boostrap script for JS-->
@@ -127,6 +130,9 @@
     src="https://code.jquery.com/jquery-4.0.0.js"
     integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
     crossorigin="anonymous"></script>
+
+    <!--html2pdf script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"></script>
 
     <script src="assets/js/script.js"></script>
 

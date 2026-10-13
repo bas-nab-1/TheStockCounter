@@ -125,6 +125,7 @@ document.getElementById("save-btn").addEventListener("click", function() {
     $("#new-location").hide();
     $("#new-location-btn").show();
     $("#duplicate").hide();
+    $("#report").show("swing");
 });
 
 function transferItemDescription(row) {
@@ -143,7 +144,29 @@ function transferDifference(row) {
     row.insertCell().textContent = document.getElementById("difference").value;
 }
 
+// Generates a PDF from the #report element 
+// and downloads it when the button is clicked.
 
+document.getElementById("download").addEventListener("click", generatePDF)
+
+function generatePDF(e) {
+    const pencil=document.getElementById("edit-title");
+    pencil.classList.add("hide-pencil")
+    const element = document.getElementById('print');
+    const options = {
+        margin:       1,
+        filename:     'document.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    
+    return html2pdf().set(options).from(element).save().then(
+        function() {
+            pencil.classList.remove("hide-pencil");
+        },
+    );
+}
 
 // Enables the Bootstrap tooltips
 
