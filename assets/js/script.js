@@ -131,6 +131,13 @@ document.getElementById("save-btn").addEventListener("click", function() {
         element.value = "";
     });
 
+    // Removes previously created div when a new item is created
+    document.querySelectorAll(".new-location-input").forEach((location, index) => {
+        if (index > 0) {
+            location.remove();
+        }
+    });
+
     $("#new-location").hide();
     $("#new-location-btn").show();
     $("#duplicate").hide();
