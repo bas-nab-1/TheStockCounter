@@ -43,10 +43,12 @@
             </div>
         </section>
 
+        <!-- Section displayed when the user clicks on the start count button -->
         <section id="main">
             <div class="container" id="add-item">
                 <h2>Add Item</h2>
                 <div id="stocktake">
+                    <!-- User enters values in the inputs -->
                     <div id="stocktake-input">
                         <div>
                             <label for="item-description">Item-description</label>
@@ -69,6 +71,7 @@
                             <input id="difference" readonly>
                         </div>
                     </div>
+                    <!-- this div is only visible if user clicks Add Location button-->
                     <div id="new-location">
                         <h3>Item Location</h3>
                         <div class="new-location-input">
@@ -84,7 +87,10 @@
                             </div>
                         </div>
                     </div>
+
                     <div id="stocktake-btn">
+                        <!-- The new-location-btn is replaced by the duplicate btn when clicked because of the different js functions
+                        they possess-->
                         <button class="btn" id="new-location-btn">Add Location</button>
                         <button class="btn" id="duplicate">Add Location</button>
                         <button class="btn" id="save-btn">Save Item</button>
@@ -93,6 +99,7 @@
             </div>
         </section>
 
+        <!--Creates a table from the data entered previously and can be converted to a PDF file-->
         <section class="container" id="report">
             <div id="print">
                 <div id="report-title">
@@ -112,6 +119,7 @@
                     </tbody>
                 </table>
             </div>
+            <!-- Downloads a Pdf file of the table -->
             <button class="btn" id="download">Download PDF</button>
         </section>
     </main>

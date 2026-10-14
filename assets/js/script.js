@@ -92,8 +92,9 @@ document.getElementById("edit-title").addEventListener("click", function() {
     title.replaceWith(titleInput);
 })
 
-// Transfer the values of the inputs to the table when Save button is clicked
+// Save button
 
+// Transfer the values of the inputs to the table when Save button is clicked
 document.getElementById("save-btn").addEventListener("click", function() {
         const itemDescription = document.getElementById("item-description");
     const itemQuantity = document.getElementById("quantity");
@@ -114,16 +115,16 @@ document.getElementById("save-btn").addEventListener("click", function() {
     transferDifference(row);
     document.getElementById("transfer").appendChild(row);
     
-    // resets the input fields of the add-item div
-    //when save-btn is clicked
+    /* resets the input fields of the add-item div
+    when save-btn is clicked */
     
     document.getElementById("item-description").value = "";
     document.getElementById("quantity").value = "";
     document.getElementById("quantity-required").value = "";
     document.getElementById("difference").value = "";
 
-    // resets the input fields of new-location-input 
-    // when save btn is clicked
+    /* resets the input fields of new-location-input 
+     when save btn is clicked */
     document.querySelectorAll(".item-location").forEach(element => {
         element.value = "";
     });
@@ -144,6 +145,8 @@ document.getElementById("save-btn").addEventListener("click", function() {
     $("#report").show("swing");
 });
 
+
+// Functions used to transfer item values into the table row
 function transferItemDescription(row) {
     row.insertCell().textContent = document.getElementById("item-description").value;
 }
@@ -160,8 +163,9 @@ function transferDifference(row) {
     row.insertCell().textContent = document.getElementById("difference").value;
 }
 
-// Generates a PDF from the #report element 
-// and downloads it when the button is clicked.
+
+/* Generates a PDF from the #report element 
+and downloads it when the button is clicked. */
 
 document.getElementById("download").addEventListener("click", generatePDF)
 
