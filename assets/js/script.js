@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 // Function to switch from intro to main content
 
 $("#start-btn").on("click", function() {
@@ -52,7 +54,7 @@ function updateDifference() {
     }
     
     differenceInput.value = qty - req;
-};
+}
 
 // Adds the quantities entered for each location to the overall quantity
 
@@ -69,13 +71,13 @@ document.addEventListener("input", function(e) {
     }
     document.getElementById("quantity").value = hasQuantity ? total : "";
     updateDifference();
-})
+});
 
 
 // Allows user to modify the title of the report
 
 document.getElementById("edit-title").addEventListener("click", function() {
-    const title = document.getElementById("title")
+    const title = document.getElementById("title");
     const titleInput = document.createElement("input");
     titleInput.id = "title-input";
     titleInput.type = "text";
@@ -90,7 +92,7 @@ document.getElementById("edit-title").addEventListener("click", function() {
         titleInput.replaceWith(updatedTitle);
     });
     title.replaceWith(titleInput);
-})
+});
 
 // Save button
 
@@ -167,11 +169,11 @@ function transferDifference(row) {
 /* Generates a PDF from the #report element 
 and downloads it when the button is clicked. */
 
-document.getElementById("download").addEventListener("click", generatePDF)
+document.getElementById("download").addEventListener("click", generatePDF);
 
 function generatePDF(e) {
     const pencil=document.getElementById("edit-title");
-    pencil.classList.add("hide-pencil")
+    pencil.classList.add("hide-pencil");
     const element = document.getElementById('print');
     const options = {
         margin:       0.5,
@@ -190,5 +192,5 @@ function generatePDF(e) {
 
 // Enables the Bootstrap tooltips
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
