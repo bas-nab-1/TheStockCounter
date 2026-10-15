@@ -168,6 +168,27 @@ a {
     font-family: var(--secondary-font);
 }
 
+#error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+#error h2 {
+    text-align: center;
+}
+
+#calculator {
+    height: auto;
+    width: 150px;
+}
+
+#return-btn {
+    margin-bottom: 20px;
+}
 /* to fix alignement issues on mobile */
 
 /* small devices (440px and up) */
