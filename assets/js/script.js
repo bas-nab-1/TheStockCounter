@@ -99,7 +99,7 @@ document.getElementById("edit-title").addEventListener("click", function() {
 // Transfer the values of the inputs to the table when Save button is clicked
 document.getElementById("save-btn").addEventListener("click", function() {
         const itemDescription = document.getElementById("item-description");
-    const itemQuantity = document.getElementById("quantity");
+        const itemQuantity = document.getElementById("quantity");
     // checks that the required input are not empty an informs the user
     if(!itemDescription.reportValidity()) {
         return;
