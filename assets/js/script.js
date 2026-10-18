@@ -100,12 +100,17 @@ document.getElementById("edit-title").addEventListener("click", function() {
 document.getElementById("save-btn").addEventListener("click", function() {
         const itemDescription = document.getElementById("item-description");
         const itemQuantity = document.getElementById("quantity");
+        const quantityLocation = document.getElementById("item-quantity-location")
     // checks that the required input are not empty an informs the user
     if(!itemDescription.reportValidity()) {
         return;
     }
 
     if(!itemQuantity.reportValidity()) {
+        return;
+    }
+
+    if (!quantityLocation.reportValidity()) {
         return;
     }
     
