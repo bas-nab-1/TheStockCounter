@@ -124,6 +124,7 @@ Any remaining open issues can be tracked [here](https://www.github.com/bas-nab-1
 | Issue | Screenshot |
 | --- | --- |
 | The project is designed to be responsive from `375px` and upwards, in line with the material taught on the course LMS. Minor layout inconsistencies may occur on extra-wide (e.g. 4k/8k monitors), or smart-display devices (e.g. Nest Hub, Smart Watches, Gameboy Color, etc.), as these resolutions are outside the project’s scope, as taught by Code Institute. | ![screenshot](documentation/issues/poor-responsiveness.png) |
+| The quantity input fields is accepting the input of the letter e as value, but cannot be validated with the save item button. It can throw off the calculation of the overall quantity when the user enters "e" in a quantity input field of the add location section of the page | ![screenshot](documentation/bugs/letter-e.png) |
 
 > [!IMPORTANT]  
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
